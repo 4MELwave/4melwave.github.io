@@ -9,7 +9,7 @@ function remc()
 {
 document.cookie = "disallow=didntGet"
 //console.log("disallowed")
-window.location.href = 'http://google.com';
+window.location.href = 'http://wikipedia.org';
 }
 
 
@@ -37,7 +37,7 @@ function redir()
 
     var x2 = 900;
     
-    var y = decodeURIComponent(document.cookie);
+    var y = document.cookie.toString()
     var x = y.split("; ");
     //console.log("the cookie is");
     //console.log(x);
@@ -79,7 +79,7 @@ function redir()
     if(rejected)
     {
         //console.log("leave")
-        window.location.href = 'https://google.com';
+        window.location.href = 'https://wikipedia.org';
     }
     
 }
@@ -92,7 +92,7 @@ function redirL()
     //if disallow=didntGet is present, the user is always redirected away. this overrides the allow value.
     
     //check if the user has the cookie.
-    var y = decodeURIComponent(document.cookie)
+    var y = document.cookie.toString()
     var x = y.split("; ")
     //console.log("the cookie is")
     //console.log(x)
@@ -131,7 +131,7 @@ function redirL()
     if(rejected)
     {
         //console.log("leave")
-        window.location.href = 'https://google.com';
+        window.location.href = "https://wikipedia.org";
     }
  
 }
