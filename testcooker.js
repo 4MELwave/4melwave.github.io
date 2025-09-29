@@ -25,8 +25,8 @@ function givec()
 
 function redir()
 {
-    document.title = "got to start"
-    //document.title = "whoa!"
+    
+    
     //this is run every time any page loads on the site.
     //if allow=heGotDaCookie is present, the user may use the site.
     //if disallow=didntGet is present, the user is always redirected away. this overrides the allow value.
@@ -36,7 +36,7 @@ function redir()
 
 
     var x2 = 900;
-    document.title = "got before decode"
+    
     var y = decodeURIComponent(document.cookie);
     var x = y.split("; ");
     //console.log("the cookie is");
@@ -45,7 +45,7 @@ function redir()
 
     var accepted = false
     var rejected = false
-    //document.title = "got thru decode"
+    
     //iterate over array to find "allow=heGotDaCookie"
     //http://192.168.50.22:3030/test
     for(i = 0; i<x.length ; i++)
@@ -67,7 +67,7 @@ function redir()
     }
 
     
-    //document.title = rejected
+    
     //if the user has neither, redirect to landing.
     if(!accepted && !rejected)
     {
@@ -81,7 +81,7 @@ function redir()
         //console.log("leave")
         window.location.href = 'https://google.com';
     }
-    document.title = rejected
+    
 }
 
 //this is for the landing page only.
